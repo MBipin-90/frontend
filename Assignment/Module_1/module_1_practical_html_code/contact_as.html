@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  
+    <body>
+	 
+		   <form method="post">
+		    <h1>Contact as</h1>
+		   Full name: 
+		   <input type="text" name="fname" placeholder="First Name" required>
+		   <br><br>
+		  E-mail: 
+		  <input type="email" name="email" placeholder="Email" required>
+		  <br><br>
+		  Phone No: 
+		  <input type="tel" name="number" required pattern="[0-9]{10}"  title="ADD phone" placeholder="Enter your number">
+		  <br><br>
+		Subject: 
+		<select name="Subject">
+		    <option value="Python">Python</option>
+			<option value="java">Java</option>
+			<option value="c">C</option>
+			<option value="c++">C++</option>
+			<option value="dbms">DBMS</option>
+			<option value="javascript">JavaScript</option>
+	     </select>
+		 <br><br>
+		 Message:
+		 <textarea name="message" id="message" minlength="13" maxlength="100" placeholder="Emter your Message"></textarea>
+		 <br><br>
+			<input type="submit" name="submit" value="Submit">
+			
+		   </form>
+	</<body>
+</html>
