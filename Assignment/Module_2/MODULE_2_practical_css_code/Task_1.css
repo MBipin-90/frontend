@@ -1,0 +1,46 @@
+/* Styling the form background */
+.contact-form {
+    background-color: #f0f8ff; /* AliceBlue */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+}
+
+/* Styling common form fields using a class selector */
+.form-field {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Styling the submit button using an ID selector and adding a hover effect */
+#submit-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+#submit-button:hover {
+    background-color: blue; /* Darker green on hover */
+}
+
+/* Styling form groups for consistent spacing */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}

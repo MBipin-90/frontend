@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex; /* Make body a flex container */
+            flex-direction: column; /* Stack header, main-content-wrapper, and footer vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .main-content-wrapper {
+            display: flex; /* Make this a flex container for sidebar and main content */
+            flex-grow: 1; /* Allow this wrapper to grow and fill available space */
+        }
+
+        .sidebar {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            width: 200px; /* Fixed width for sidebar */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the start of the cross axis */
+            align-items: center; /* Center items along the cross axis */
+        }
+
+        .main-content {
+            background-color: #fff;
+            padding: 1rem;
+            flex-grow: 1; /* Allow main content to grow and fill remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .main-content-wrapper {
+                flex-direction: column; /* Stack sidebar and main content vertically on small screens */
+            }
+
+            .sidebar {
+                width: auto; /* Allow sidebar to take full width on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Header</h1>
+    </header>
+
+    <div class="main-content-wrapper">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Navigation links or other sidebar content.</p>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <h2>Main Content Area</h2>
+            <p>This is the primary content of the webpage. It will expand to fill the available space.</p>
+            <p>Observe how the `justify-content` and `align-items` properties affect the positioning of content within this area.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Flexbox Layout Example</p>
+    </footer>
+</body>
+</html>
